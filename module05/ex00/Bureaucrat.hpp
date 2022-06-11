@@ -1,0 +1,32 @@
+#ifndef CPP_MODULES_BUREAUCRAT_H
+# define CPP_MODULES_BUREAUCRAT_H
+# include <iostream>
+# include <exception>
+# include <string>
+
+class Bureaucrat {
+public:
+    ~Bureaucrat() {};
+    Bureaucrat(std::string const name, int grade);
+    Bureaucrat(Bureaucrat const &);
+    Bureaucrat & operator=(Bureaucrat const &);
+    std::string const &getName(void) const;
+    int getGrade(void) const;
+    void upGrade(void);
+    void downGrade(void);
+    class GradeTooHighException: public std::exception {
+        virtual const char* what() const throw();
+    };
+    class GradeTooLowException: public std::exception {
+        virtual const char* what() const throw();
+    };
+
+private:
+    Bureaucrat();
+    const std::string name;
+    int grade;
+};
+
+std::ostream &operator<<(std::ostream &o, Bureaucrat const &b);
+
+#endif //CPP_MODULES_BUREAUCRAT_H
