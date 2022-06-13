@@ -1,5 +1,5 @@
-//
-// Created by Ivan on 13.06.2022.
-//
-
 #include "Intern.hpp"
+
+Intern::Intern() {
+  std::cout << "Intern created" << std::endl;
+}

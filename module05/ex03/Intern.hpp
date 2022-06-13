@@ -1,16 +1,14 @@
-//
-// Created by Ivan on 13.06.2022.
-//
-
-#ifndef GITIGNORE_TXT_INTERN_HPP
-#define GITIGNORE_TXT_INTERN_HPP
-
-
+#ifndef INTERN_HPP
+# define INTERN_HPP
+# include "Form.hpp"
 
 class Intern {
-
+public:
+  Intern();
+  ~Intern();
+  Intern(const Intern &);
+  Intern& operator=(const Intern &);
+  Form* makeForm(std::string form_name, std::string target);
 };
 
-
-
-#endif //GITIGNORE_TXT_INTERN_HPP
+#endif // INTERN_HPP
