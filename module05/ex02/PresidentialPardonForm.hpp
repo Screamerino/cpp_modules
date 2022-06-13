@@ -1,0 +1,16 @@
+//
+// Created by Ivan on 13.06.2022.
+//
+
+#ifndef GITIGNORE_TXT_PRESIDENTIALPARDONFORM_HPP
+#define GITIGNORE_TXT_PRESIDENTIALPARDONFORM_HPP
+
+
+
+class PresidentialPardonForm {
+
+};
+
+
+
+#endif //GITIGNORE_TXT_PRESIDENTIALPARDONFORM_HPP

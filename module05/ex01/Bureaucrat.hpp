@@ -6,7 +6,7 @@
 
 class Bureaucrat {
 public:
-    ~Bureaucrat();
+    ~Bureaucrat() {};
     Bureaucrat(std::string const name, int grade);
     Bureaucrat(Bureaucrat const &);
     Bureaucrat & operator=(Bureaucrat const &);
@@ -14,7 +14,6 @@ public:
     int getGrade(void) const;
     void upGrade(void);
     void downGrade(void);
-
     class GradeTooHighException: public std::exception {
         virtual const char* what() const throw();
     };
